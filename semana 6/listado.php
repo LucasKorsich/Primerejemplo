@@ -1,25 +1,20 @@
-<?php
-$miarchivo = fopen("usuarios.txt", "r");
-while(!feof($miArchivo)) {
 
-$objeto =json_decode(fgets($miArchivo));
-
-echo $objeto->nombre;
-}
-fclose($miArchivo);
-?>
 <!DOCTYPE html>
 <html>
 <body>
 
-<h2>listado de usuarios</h2>
+<h2>An Ordered HTML Listadeusuario</h2>
 
 
 <ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
-
+<?php
+$miarchivo =fopen ("usuarios.txt","r");
+while (!feof($miarchivo)){
+	$objeto=json_decode(fgets($miarchivo));
+	echo "<li>".$objeto->Nombre."</li>";
+}
+fclose($miarchivo);
+?>
+</ol>
 </body>
 </html>
